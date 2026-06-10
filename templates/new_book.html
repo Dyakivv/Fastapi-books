@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Нова книга</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background: #1a252f;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">➕ Додати нову книгу</h2>
+
+<form method="post" action="/books/new">
+
+    <input name="title" placeholder="Назва книги" required>
+    <input name="author" placeholder="Автор" required>
+    <input name="year" type="number" placeholder="Рік" required>
+    <input name="pages" type="number" placeholder="Сторінки" required>
+    <input name="image" placeholder="URL зображення" required>
+
+    <select name="language">
+        <option value="ua">Українська</option>
+        <option value="en">Зарубіжна</option>
+    </select>
+
+    <button type="submit">Зберегти</button>
+
+</form>
+
+<a href="/">⬅ Назад</a>
+
+</body>
+</html>
