@@ -78,3 +78,10 @@ def create_book(
         writer.writerows(books)
 
     return RedirectResponse(url="/", status_code=303)
+
+@app.get("/info")
+def info(request: Request):
+    return templates.TemplateResponse(
+        "info.html",
+        {"request": request}
+    )
