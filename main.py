@@ -85,7 +85,6 @@ class CSVBookRepository(BaseRepository):
             for b in books:
                 writer.writerow(b.to_dict())
 
-
 repo = CSVBookRepository()
 
 @app.get("/")
