@@ -19,7 +19,6 @@ class Book:
         self.language = language
 
     def to_dict(self) -> dict:
-        """Зручний метод для збереження в CSV"""
         return {
             "id": self.id,
             "title": self.title,
@@ -49,7 +48,6 @@ class CSVBookRepository(BaseRepository):
     _fieldnames = ["id", "title", "author", "year", "pages", "image", "language"]
 
     def __new__(cls, *args, **kwargs):
-        """Реалізація патерну Singleton"""
         if not cls._instance:
             cls._instance = super().__new__(cls, *args, **kwargs)
         return cls._instance
